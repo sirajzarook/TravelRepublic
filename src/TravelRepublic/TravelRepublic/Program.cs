@@ -16,7 +16,7 @@ namespace TravelRepublic
 			FlightReportSettings reportSettings = new FlightReportSettings()
 			{
 				TransitInHours = 2,
-				dateToday = DateTime.Today
+				currenttime = DateTime.Now
 
 			};
 
@@ -24,7 +24,7 @@ namespace TravelRepublic
 			FlightAnalyzer flightAnalizer = new FlightAnalyzer(flighBuilder);
 			FlightReports flightReports = new FlightReports(flightAnalizer, reportSettings);
 
-			Console.WriteLine("Number of flights departs before current date: {0}"
+			Console.WriteLine("Number of flights departs before current date/time: {0}"
 									, flightReports.GetFlightsDepartBeforeToday().Count());
 			Console.WriteLine("Number of flights with error segments: {0}"
 									, flightReports.GetFlightsWithErrorSegments().Count());

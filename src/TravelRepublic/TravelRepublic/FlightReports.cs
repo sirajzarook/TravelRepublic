@@ -20,7 +20,7 @@ namespace TravelRepublic
 
 		public IList<Flight> GetFlightsDepartBeforeToday()
 		{
-			return _flightAnalyzer.FlightsDepartBeforeToday(_reportSettings.dateToday);
+			return _flightAnalyzer.FlightsDepartBeforeCurrentTime(_reportSettings.currenttime);
 		}
 		public IList<Flight> GetFlightsWithErrorSegments()
 		{

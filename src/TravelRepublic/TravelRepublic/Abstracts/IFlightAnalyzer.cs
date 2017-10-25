@@ -9,7 +9,7 @@ namespace TravelRepublic
 {
 	public interface IFlightAnalyzer
 	{
-		IList<Flight> FlightsDepartBeforeToday(DateTime today);
+		IList<Flight> FlightsDepartBeforeCurrentTime(DateTime today);
 		IList<Flight> FlightsWithErrorSegments();
 		IList<Flight> FlightsWaitLonger(int hours);
 

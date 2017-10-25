@@ -10,7 +10,7 @@ namespace TravelRepublic.Tests
 	public class FlighrReportShould : TestBase
 	{
 		[TestMethod]
-		public void ReturnFlightDepartBeforeToday()
+		public void ReturnFlightDepartBeforeCurrentTime()
 		{
 			//Arrange
 			FlightReports flightReports = new FlightReports(flightAnalizer, reportSettings);
@@ -24,7 +24,7 @@ namespace TravelRepublic.Tests
 			foreach (var flight in flights)
 			{
 				//at least onesegment of the flight leave before today
-				Assert.IsTrue(flight.Segments.Where(t => t.DepartureDate < reportSettings.dateToday).Count() > 0);
+				Assert.IsTrue(flight.Segments.Where(t => t.DepartureDate < reportSettings.currenttime).Count() > 0);
 			}
 
 

@@ -22,9 +22,9 @@ namespace TravelRepublic
 		/// </summary>
 		/// <param name="today"></param>
 		/// <returns></returns>
-		public IList<Flight> FlightsDepartBeforeToday(DateTime today)
+		public IList<Flight> FlightsDepartBeforeCurrentTime(DateTime currenttime)
 		{
-			return _flights.Where(t => t.Segments.All(d => d.DepartureDate < today)).ToList();
+			return _flights.Where(t => t.Segments.All(d => d.DepartureDate < currenttime)).ToList();
 		}
 
 

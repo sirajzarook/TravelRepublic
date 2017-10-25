@@ -9,7 +9,7 @@ namespace TravelRepublic.Config
 	public class FlightReportSettings
 	{
 		public int TransitInHours { get; set; }
-		public DateTime dateToday { get; set; }
+		public DateTime currenttime { get; set; }
 
 	}
 }

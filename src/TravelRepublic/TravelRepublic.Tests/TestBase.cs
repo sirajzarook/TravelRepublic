@@ -19,7 +19,7 @@ namespace TravelRepublic.Tests
 			reportSettings = new FlightReportSettings()
 			{
 				TransitInHours = 2,
-				dateToday = DateTime.Today
+				currenttime = DateTime.Now
 
 			};
 
